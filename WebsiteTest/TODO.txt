@@ -1,0 +1,9 @@
+﻿1.Add HomePage to pages folder and create locators + write a method that navigates to LoginPage and ShopPage
+1. Add ShopPage to pages folder and create locators similar to loginpage
+
+2. Create Browsessession class and ibrowser session interface to stop using driver in tests????
+2. Create StartPlugin method ???
+
+DONE 3. Implement last loaded element- DONE
+
+DONE 4. Method for finding products in shop by name

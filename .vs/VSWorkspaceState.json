@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TestProject",
+    "\\TestProject\\Base"
   ],
-  "SelectedNode": "\\C:\\Users\\User\\Source\\Repos\\TAF",
+  "SelectedNode": "\\TestProject\\Base\\Browser.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\TestProject\\AutoFramework.csproj": {}
+    "C:\\Users\\User\\source\\repos\\TAF\\TestProject\\AutoFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\TestProject\\AutoFramework.csproj": {
+    "C:\\Users\\User\\source\\repos\\TAF\\TestProject\\AutoFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\TestProject\\AutoFramework.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\TAF\\TestProject\\AutoFramework.csproj",
         "projectName": "AutoFramework",
-        "projectPath": "C:\\Users\\User\\source\\repos\\TestProject\\AutoFramework.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\TAF\\TestProject\\AutoFramework.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\TAF\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
