@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[3.11.0, )"
             },
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[4.1.0, )"
@@ -55,6 +63,10 @@
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
               "version": "[100.0.4896.6000, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

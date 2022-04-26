@@ -9,6 +9,7 @@ using WebsiteTest.Pages;
 using AutoFramework.Base;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Firefox;
+using AutoFramework.Helpers;
 
 namespace WebsiteTest
 {
@@ -33,7 +34,7 @@ namespace WebsiteTest
                 case BrowserType.Chrome:
                     DriverContext.Driver = new ChromeDriver();
                     DriverContext.Browser = new Browser(DriverContext.Driver);
-                    break;              
+                    break;
             }
         }
 
@@ -42,7 +43,7 @@ namespace WebsiteTest
         public void Setup()
         {
             OpenBrowser(BrowserType.Chrome);
-            DriverContext.Browser.GoToUrl(url);         
+            DriverContext.Browser.GoToUrl(url);
         }
 
         [TearDown]
@@ -75,6 +76,15 @@ namespace WebsiteTest
 
         }
 
+        [Test]
+        public void ExcelTest()
+        {
+            string fileName = Environment.CurrentDirectory.ToString() + "\\Data\\Login.xlsx";
 
+            ExcelHelper.PopulateCollection(fileName);
+
+            var userName = ExcelHelper.ReadData(1, "UserName");
+            var password = ExcelHelper.ReadData(1, "Password");
+        }
     }
 }
