@@ -22,4 +22,10 @@
     <ProjectReference Include="..\TestProject\AutoFramework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\Login.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
