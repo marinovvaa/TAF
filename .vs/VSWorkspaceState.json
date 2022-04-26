@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TestProject",
-    "\\TestProject\\Base"
+    ""
   ],
-  "SelectedNode": "\\TestProject\\Base\\Browser.cs",
+  "SelectedNode": "\\TestProject",
   "PreviewInSolutionExplorer": false
 }
