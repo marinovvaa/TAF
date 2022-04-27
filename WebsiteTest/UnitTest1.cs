@@ -86,5 +86,13 @@ namespace WebsiteTest
             var userName = ExcelHelper.ReadData(1, "UserName");
             var password = ExcelHelper.ReadData(1, "Password");
         }
+
+        [Test]
+        public void LogHelperTest()
+        {
+            LogHelpers.CreateLogFile();
+            LogHelpers.Write("Opened the browser!");
+            LogHelpers.Write("Opened the URL");
+        }
     }
 }
