@@ -7,3 +7,5 @@
 DONE 3. Implement last loaded element- DONE
 
 DONE 4. Method for finding products in shop by name
+
+5. Трябва ли да запазя DataHelperExtension?
