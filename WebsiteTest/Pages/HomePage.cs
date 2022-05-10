@@ -1,4 +1,5 @@
-﻿using AutoFramework.Base;
+﻿using AutoFramework;
+using AutoFramework.Base;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -9,13 +10,13 @@ namespace WebsiteTest.Pages
 {
     public class HomePage : BasePage
     {
-        public HomePage(bool assertLoaded = false) : base(assertLoaded)
+        public HomePage(IBrowserSession session) : base(session)
             {
             }
 
         public override Func<IWebDriver, IWebElement> LastLoadedElementCondition
         {
-            get { return ExpectedConditions.ElementToBeClickable(By.XPath(loginBtnPath)); }
+            get { return ExpectedConditions.ElementExists(By.XPath(loginBtnPath)); }
         }
 
 
@@ -23,9 +24,9 @@ namespace WebsiteTest.Pages
 
         protected string shopBtnPath => "//div/p[text() = 'Shop']";
 
-        private IWebElement LoginBtn => new WebDriverWait(DriverContext.Driver, TimeSpan.FromSeconds(15)).Until(ExpectedConditions.ElementToBeClickable(By.XPath(loginBtnPath)));
+        private IWebElement LoginBtn => Session.SafeWaitUntil(ExpectedConditions.ElementToBeClickable(By.XPath(loginBtnPath)));
 
-        private IWebElement ShopBtn => new WebDriverWait(DriverContext.Driver, TimeSpan.FromSeconds(15)).Until(ExpectedConditions.ElementToBeClickable(By.XPath(shopBtnPath)));
+        private IWebElement ShopBtn => Session.SafeWaitUntil(ExpectedConditions.ElementToBeClickable(By.XPath(shopBtnPath)));
 
 
 
@@ -46,7 +47,7 @@ namespace WebsiteTest.Pages
                 Thread.Sleep(3000);
 
 
-                loginPage = new LoginPage();
+                loginPage = new LoginPage(Session);
             }
             return loginPage;
         }
@@ -59,7 +60,7 @@ namespace WebsiteTest.Pages
             {
                 shopBtn.Click();
               
-                shopPage = new ShopPage();
+                shopPage = new ShopPage(Session);
             }
             return shopPage;
         }
