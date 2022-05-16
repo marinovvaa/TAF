@@ -35,6 +35,19 @@ namespace AutoFramework.Base
 
         #region methods
 
+        /// <summary>
+        /// Hover onto an element by finding it by xpath that is passed
+        /// </summary>
+        public void HoverElement(string xPath)
+        {
+            IWebElement element = Session.SafeGetElement(By.XPath(xPath));
+
+            //Creating object of an Actions class
+            Actions action = new Actions(Session.Driver);
+
+            //Performing the mouse hover action on the target element.
+            action.MoveToElement(element);
+        }
         public IWebElement GetItemByText(IReadOnlyCollection<IWebElement> items, string text)
         {
             IWebElement result = null;

@@ -21,5 +21,17 @@ namespace WebsiteTest.Pages
 
         public IWebElement ProductLocator(string productName) => Session.SafeWaitUntil(ExpectedConditions.ElementToBeClickable(By.XPath($"{productPath}/h3[text() = '{productName}']")));
 
+        public ProductPage OpenProduct(string productName)
+        {
+            var product = ProductLocator(productName);
+            ProductPage productPage = null;
+
+            if(product != null)
+            {
+                product.Click();
+                productPage = new ProductPage(Session);
+            }
+            return productPage;
+        }
     }
 }
