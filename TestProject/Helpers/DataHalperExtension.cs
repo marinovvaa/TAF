@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace AutoFramework.Helpers
 {
-    public static class DataHalperExtensions
+    public static class DataHalperExtension
     {
         //Open the connection with the DB 
         public static SqlConnection DBConnect(this SqlConnection sqlConnection, string connectionString)
@@ -16,7 +16,7 @@ namespace AutoFramework.Helpers
             }
             catch (Exception e)
             {
-                LogHelpers.Write($"Error: {e.Message} ");
+                LogHelper.Write($"Error: {e.Message} ");
             }
             return null;
         }
@@ -33,7 +33,7 @@ namespace AutoFramework.Helpers
             }
             catch (Exception e)
             {
-                LogHelpers.Write($"Error: {e.Message} ");
+                LogHelper.Write($"Error: {e.Message} ");
             }
         }
 
@@ -64,7 +64,7 @@ namespace AutoFramework.Helpers
             {
                 dataset = null;
                 sqlConnection.Close();
-                LogHelpers.Write($"Error: {e.Message} ");
+                LogHelper.Write($"Error: {e.Message} ");
                 return null;
             }
             finally

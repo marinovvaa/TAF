@@ -17,4 +17,17 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Helpers\LogHelper.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="taskkill /f /fi &quot;imagename eq chromedriver.exe&quot;&#xD;&#xA;
+			taskkill /f /fi &quot;imagename eq MicrosoftWebDriver.exe&quot;&#xD;&#xA;
+			taskkill /f /fi &quot;imagename eq geckodriver.exe&quot;&#xD;&#xA;
+			taskkill /f /fi &quot;imagename eq IEDriverServer.exe&quot;" />
+	</Target>
+	
 </Project>

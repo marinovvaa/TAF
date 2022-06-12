@@ -145,9 +145,9 @@ namespace WebsiteTest
         [Test]
         public void LogHelperTest()
         {
-            LogHelpers.CreateLogFile();
-            LogHelpers.Write("Opened the browser!");
-            LogHelpers.Write("Opened the URL");
+            LogHelper.CreateLogFile();
+            LogHelper.Write("Opened the browser!");
+            LogHelper.Write("Opened the URL");
         }
     }
 }
