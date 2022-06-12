@@ -1,17 +1,25 @@
 ﻿namespace AutoFramework.Helpers
 {
-    public class LogHelpers
+    public class LogHelper
     {
         //Global declaration of log file name
         private static string _logFileName = string.Format("{0:yyyymmddhhmmss}", DateTime.Now);
 
         private static StreamWriter _streamWriter = null;
 
+        private static string GetLogDirPath()
+        {            
+            string outputDir = Environment.CurrentDirectory.ToString();
+            string relPath = "\\Logs";
+            var result = outputDir + relPath;
+            return result;
+        }
+
         //Create a file which can store the log information
         public static void CreateLogFile()
         {
             //This will be changed!!
-            string dir = @"C:\Users\User\source\repos\TAF\TestProject\";
+            string dir = GetLogDirPath();
 
             if(Directory.Exists(dir))
             {

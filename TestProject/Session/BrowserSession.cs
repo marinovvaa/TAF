@@ -66,7 +66,7 @@ namespace AutoFramework
             Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(SessionConfig.WaitSeconds));
             Driver.Manage().Window.Size = new System.Drawing.Size(SessionConfig.BrowserWidth, SessionConfig.BrowserHeight);
             Driver.Url = SessionConfig.StratUrl;
-        }
+         }
 
         private string GetDriverPath(BrowserType browserType)
         {
