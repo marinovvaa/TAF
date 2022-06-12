@@ -1,14 +1,6 @@
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 using System;
-using SeleniumExtras.WaitHelpers;
-using System.Threading;
 using WebsiteTest.Pages;
-using AutoFramework.Base;
-using OpenQA.Selenium.IE;
-using OpenQA.Selenium.Firefox;
 using AutoFramework.Helpers;
 using AutoFramework;
 
