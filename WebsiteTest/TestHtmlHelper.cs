@@ -39,7 +39,6 @@ namespace WebsiteTest
         [Test]
         public void TestHtmlHelpersExample()
         {
-            //var table = new WebDriverWait(DriverContext.Driver, TimeSpan.FromSeconds(15)).Until(ExpectedConditions.ElementExists(By.XPath("//table")));
             var table = Session.SafeGetElement(By.XPath("//table"));
             HtmlTableHelper.ReadTable(table);
             HtmlTableHelper.PerformActionOnCell("3", "Name", "Ana", "gitHub");
