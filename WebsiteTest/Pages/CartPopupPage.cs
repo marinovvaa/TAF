@@ -3,10 +3,6 @@ using AutoFramework.Base;
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebsiteTest.Pages
 {
