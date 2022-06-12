@@ -1,4 +1,5 @@
 ﻿using AutoFramework;
+using System;
 
 namespace WebsiteTest
 {
@@ -14,7 +15,7 @@ namespace WebsiteTest
         {
             get
             {
-                return new SessionConfig("https://anamarinovva.wixsite.com/website-1", "ana.marinovva@gmail.com", "WixPassword_123");
+                return SessionConfig.ReadFromFile(Environment.CurrentDirectory.ToString() + "//SessionConfig.json");
             }
         }
     }

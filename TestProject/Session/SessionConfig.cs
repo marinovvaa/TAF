@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +61,7 @@ namespace AutoFramework
         /// Will throw an IOException if the file could not be read.
         /// Will throw a Newtonsoft.Json.JsonReaderException if the SessionConfig could not be deserialized.
         /// </summary>
-        public static SessionConfig ReadFromFile(string filePath = "SessionConfig.json")
+        public static SessionConfig ReadFromFile(string filePath)
         {
             SessionConfig result = null; 
 
