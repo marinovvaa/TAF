@@ -17,7 +17,7 @@ namespace WebsiteTest
         }
 
         [TearDown]
-        public void AfterEachTest()
+        public void TearDown()
         {
             Session.Close();
         }
