@@ -3,7 +3,7 @@ using AutoFramework.Base;
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using System;
-
+ 
 namespace WebsiteTest.Pages
 {
     public class ProductPage : BasePage

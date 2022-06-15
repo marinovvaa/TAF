@@ -15,7 +15,7 @@
             return result;
         }
 
-        //Create a file which can store the log information
+        //Creates a file which can store the log information
         public static void CreateLogFile()
         {
             //This will be changed!!
@@ -32,10 +32,10 @@
             }
         }
 
-        //Create a method which can write the log message in the log file
+        //Writes the log message in the log file
         public static void Write(string logMessage)
         {
-            _streamWriter.Write("{0} {1} ", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
+            _streamWriter.Write($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.ToLongDateString()}");
             _streamWriter.WriteLine($"{logMessage}");
             _streamWriter.Flush();
         }
