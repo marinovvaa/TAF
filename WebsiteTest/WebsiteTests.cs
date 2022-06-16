@@ -20,18 +20,7 @@ namespace WebsiteTest
         public void TearDown()
         {
             Session.Close();
-        }
-
-        [Test]
-        public void TestLogin()
-        {
-            var homePage = new HomePage(Session);
-
-            var loginPage = homePage.GoToLoginPage();
-
-            loginPage.LogIn();
-
-        }
+        }      
 
         [Test]
         public void CheckProductName()
@@ -45,6 +34,17 @@ namespace WebsiteTest
             var productTitle = productPage.GetProductTitle();
 
             Assert.AreEqual("Cup", productTitle);
+
+        }
+
+        [Test]
+        public void TestLogin()
+        {
+            var homePage = new HomePage(Session);
+
+            var loginPage = homePage.GoToLoginPage();
+
+            loginPage.LogIn();
 
         }
 
